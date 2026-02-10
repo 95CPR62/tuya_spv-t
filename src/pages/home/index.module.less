@@ -1,0 +1,231 @@
+@import '../../styles/index.less';
+
+:root {
+  --loading-text-color: #fff;
+}
+
+.emaux_loadBox {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+
+.emaux_loading {
+    position: relative;
+    background: #000000cc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20rpx 50rpx;
+    border-radius: 20rpx;
+}
+
+button {
+  background-color: transparent;
+}
+
+
+.safeArea{
+  overflow: hidden;
+  padding-bottom: 0 !important;
+}
+
+.scrollContainer {
+  height: auto !important;
+  max-height: unset !important;
+}
+
+.container {
+  height: calc(100%);
+  max-height: 100%;
+  overflow-x: hidden;
+  margin-top: 20rpx;
+  overflow-y: scroll;
+}
+// scroll-view {
+//   height: auto;
+//   max-height: calc(100% - 690rpx);
+//   overflow-y: scroll;
+// }
+
+.faultDisplayContainer {
+  position: relative;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faultDisplayContainer text{
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+    // color: #ff4444;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    animation: blink 1s infinite;
+}
+
+.circleBtn {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s; 
+}
+
+.circleBtn.on {
+  background-color: #0056b3; /* Background color when power is ON */
+}
+
+.circleBtn.off {
+  background-color: rgba(255, 255, 255, 0.4); /* Background color when power is OFF */
+}
+  
+.circleBtn.default {
+      background-color: rgba(255, 255, 255, 0.4); /* Default background color */
+}
+
+// .circleBtn.highlighted {
+//   border: 2px solid yellow; /* Example highlight border */
+// }
+
+
+label {
+  background: transparent !important; /* Force background to be transparent */
+  margin: 0; /* Reset any margins if needed */
+  padding: 0; /* Reset padding if needed */
+}
+
+.input-placeholder::placeholder {
+  color: white; /* Change placeholder text color to white */
+  opacity: 1;   /* Ensures the placeholder is fully opaque */
+}
+
+.colorBtnOffset:not(:first-child) {
+  margin-top: 0rpx;
+}
+
+.colorBtnRowCenter {
+  justify-content: space-between;
+  width: 30vw;
+}
+.colorBtnRowSpaceBetween {
+  justify-content: space-between;
+  width: 55vw;
+}
+
+.roundedBtn {
+  // padding: 12px 24px;          /* Vertical and horizontal padding */
+  padding: 0;          /* Vertical and horizontal padding */
+  border: none;                /* Remove default border */
+  border-radius: 15px;        /* Creates rounded corners */
+  background-color: #007BFF;  /* Button background color */
+  color: white;                /* Text color */
+  font-size: 16px;             /* Font size */
+  transition: background-color 0.3s; 
+}
+
+.roundedBtn:focus {
+  outline: none;               /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
+
+.highlighted {
+  background-color: #0056b3 !important; /* Change this to your desired highlight color */
+  // background-color: #0056b3 !important; /* Change this to your desired highlight color */
+  border: none;                         /* Remove the border */
+  color: blue;                         /* Change text color to white for better contrast */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+
+.buttonStyle { 
+  padding: 20px;
+  border-radius: 25px; /* Adjust as needed for rounded corners */
+  flex: 1;
+  height: 40px; // Set a specific height
+  margin: 5px;     // Add margin for spacing between buttons
+  display: flex; // Center content
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+
+.textInputField {
+  border: 1px solid #fff !important;
+  border-radius: 50vw !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  background-color: transparent !important;
+
+}
+
+
+.labelStyle {
+  padding: 0;
+  margin: 0;
+  background-color: transparent; /* Remove background color */
+  color: white; /* Set text color as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  font-family: 'Helvetica', sans-serif; /* Change font type */
+}
+
+.highlighted .labelStyle {
+  // color: #0056b3 !important; /* Change label color to yellow when highlighted */
+  color: white;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.legendText {
+  font-size: 32rpx;
+  // color: white;
+  color:#0056b3;
+  font-family: Tahoma, sans-serif;
+}
+
+.speedInputMargin {
+  margin: 4rpx 0;
+}
+.speedInputOffset {
+  right: -8%;
+}
+
+.list {
+  padding: 10rpx 20rpx 0 20rpx !important;
+}
+
+.listDivider:not(:last-child) {
+  // padding-bottom: 10rpx;
+  border-bottom: 1px solid white;
+}
+
+.subtitleC {
+  text-align: center;
+  border-bottom: 2rpx solid #fff;
+  padding-bottom: 10rpx;
+  // margin-bottom: 14px;
+}
+
+.sliderSetSpeed {
+  position: absolute;
+  // top: '39%',
+  // left: '34%',
+  transform: translate(10%, 0);
+  width: 25vw;
+  background-color: #a1d0e3;
+  border-radius: 100vh;
+  text-align: center;
+  z-index: 9,
+}
