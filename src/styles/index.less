@@ -1,0 +1,283 @@
+:root {
+  /* 首页样式 */
+  --index-main-bg: #FFFFFF; // 页面底色
+  --index-title-bg: #FFFFFF; // title背景
+  --index-title-color: #FFFFFF; // title字体色
+  --index-text-color: #FFFFFF;
+  // --inedx-card-bg: rgba(255, 255, 255, 0.35);
+  --inedx-card-bg: #90898a;
+  --index-footer-bar-bg: #FFFFFF; // 底部操作栏底色
+  --index-icon-color: rgba(0, 0, 0, 0.5); // 图标颜色
+  // --inedx-secondary-color: rgba(38, 112, 237, 0.85);
+  --inedx-secondary-color: #4c4c4c;
+  --slider-inactive-background-color: #93aab5;
+  --inedx-button-bg: #ffffff;
+  --inedx-button-color: #020101;
+  
+  // background-image: url('public/images/bg_01.png');
+  background: rgb(0, 61, 117);
+  background-size: cover;
+  -webkit-background-size: cover;
+
+  // 字体图标
+  .iconfont {
+    margin: 0 !important;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  // Text - Header
+  .header1 {
+    font-size: 50rpx;
+    color: var(--index-text-color);
+    // font-weight: bold;
+  }
+  .header2 {
+    font-size: 56rpx;
+    color: var(--index-text-color);
+    font-weight: normal;
+  }
+
+  .headerSpeedValue {
+    font-size: 70rpx;
+    color: var(--index-text-color);
+    font-weight: bold;
+  }
+
+  // Text - description
+  .desText1 {
+    font-size: 44rpx;
+    color: var(--index-text-color);
+    font-weight: normal;
+    // font-family: "DoppioOne";
+  }
+
+  .desText2 {
+    font-size: 32rpx;
+    color: var(--index-text-color);
+    font-weight: normal;
+    // font-family: "DoppioOne";
+  }
+  .desText3 {
+    font-size: 26rpx;
+    color: var(--index-text-color);
+    font-weight: normal;
+    // font-family: "DoppioOne";
+  }
+
+  .desTextSpeed {
+    font-size: 32rpx;
+    color: var(--index-text-color);
+    font-weight: normal;
+    font-family: "DoppioOne";
+  }
+
+  .textLighter {
+    // font-weight: lighter;
+  }
+  .sensorText {
+    --index-text-color: rgba(38, 112, 237, 0.85);
+    font-family: "DoppioOne";
+  }
+
+  .safeArea {
+    // margin-top: 25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 20rpx);
+    // margin-top: 3%;
+    margin-top: 20rpx;
+    padding: 50rpx 12rpx 36rpx 12rpx;
+    box-sizing: border-box;
+  }
+
+  .scrollContainer {
+    margin: 28rpx 0;
+    height: 100vh;
+    @media (max-height: 2400px) {
+      max-height: 1920px; // 80% of 2400px
+    }
+  
+    @media (max-height: 1136px) {
+      max-height: 520px; // 80% of 1136px
+    }
+  
+    @media (max-height: 2532px) {
+      max-height: 2025.6px; // 80% of 2532px
+    }
+  }
+
+  .contentContainer {
+    width: 100%;
+    // height: 100%;
+    padding: 0 20rpx;
+    margin: 28rpx 0 0 0;
+    justify-content: flex-start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .contentFlexCol {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contentFlexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contentContainer > .contentFlexRow:not(:first-child) {
+    margin-top: 1.5vh;
+  }
+  .contentContainer > .contentFlexCol:not(:first-child) {
+    margin-top: 1.5vh;
+  }
+  .vStackSpace {
+    margin-top: 1.5vh;
+  }
+
+  .card {
+    background-color: var(--inedx-card-bg);
+    border-radius: 20rpx;
+    padding: 14rpx 18rpx 38rpx 18rpx;
+  }
+  .cardCenterRow {
+    background-color: var(--inedx-card-bg);
+    border-radius: 20rpx;
+    padding: 18rpx;
+  }
+  .cardSecondColor {
+    --inedx-card-bg: var(--inedx-button-bg);
+    --index-text-color: var(--inedx-button-color);
+  }
+
+  .mergeCardUpper{
+    background-color: var(--inedx-secondary-color);
+    border-radius: 20rpx 20rpx 0 0;
+  }
+  .mergeCardLower{
+    background-color: var(--inedx-card-bg);
+    border-radius: 0 0 20rpx 20rpx;
+  }
+
+  .singleRow {
+    height: 8vh;
+    min-height: 100rpx;
+  }
+
+  // Rounded Button
+  .roundedBtn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20rpx;
+    padding: 10rpx 0 !important;
+    font-size: 24rpx;
+    color: var(--index-text-color);
+  }
+  
+  // Capsule Button
+  .capsuleBtn {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100rpx;
+    padding: 10rpx 0 !important;
+    font-size: 26rpx;
+    color: var(--index-text-color);
+  }
+  .capsuleBtnLarge {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100rpx;
+    padding: 22rpx 0 !important;
+    font-size: 30rpx;
+    color: var(--index-text-color);
+  }
+
+  button {
+    line-height: normal;
+    padding: 0;
+  }
+  button[disabled] {
+    --index-icon-color: rgba(0, 0, 0, 0.2);
+    color: var(--index-icon-color);
+  }
+
+  .boardRight {
+    border-right: solid 2rpx white;
+  }
+
+  .textField {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+  }
+  .textFieldDisabled {
+    border: none;
+    color: white
+  }
+
+  .circleState {
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 10rpx;
+    border: 4rpx solid white;
+    background-color: chartreuse;
+  }
+  
+  .circleStateAlert {
+    background-color: #D24726;
+  }
+
+  .textStateAlert {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #D24726;
+  }
+
+  .textStatePrimingFeatureSpeed {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #0056b3;
+    white-space: normal;
+    word-break: break-all;
+    max-width: 90vw;
+
+  }
+
+  .stateEnabled {
+    background-color: var(--inedx-secondary-color) !important;
+  }
+
+  @keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .blinking {
+    animation: blink 1.5s infinite;
+  }
+}
+
+:root[theme='dark'] {
+  /* 首页样式 */
+  --index-main-bg: #000000; // 页面底色
+  --index-title-bg: #000000; // title背景
+  --index-title-color: #FFFFFF; // title字体色
+  --index-footer-bar-bg: rgb(26, 25, 25); // 底部操作栏底色
+  --index-icon-color: rgba(255, 255, 255, 0.5); // 图标颜色
+
+  button[disabled] {
+    --index-icon-color: rgba(255, 255, 255, 0.2);
+    color: var(--index-icon-color);
+  }
+}

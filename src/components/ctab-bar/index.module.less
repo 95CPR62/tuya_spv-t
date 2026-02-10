@@ -1,0 +1,45 @@
+@import '../../styles/index.less';
+
+:root {
+  --inedx-card-bg: rgba(255, 255, 255, 0.35) !important;
+}
+
+.topBarWrap{
+  color: var(--index-title-color);
+  // background-color: var(--index-title-bg);
+  width: 100vw;
+
+  .topBar {
+    height: 22px;
+    display: block;
+    width: 75vw;
+    padding-left: 30rpx;
+  }
+}
+
+.tabBarContainer {
+  background-color: var(--inedx-card-bg);
+  border-radius: 70rpx;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabBtn {
+  width: 96rpx;
+  height: 96rpx;
+  padding: 24rpx !important;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.tabBtnActive {
+  padding: 22rpx !important;
+  border-radius: 60rpx;
+  background-color: white !important;
+}
+
+.tabBtnActive .iconActive {
+  filter: invert(.75) sepia(.6) saturate(6) hue-rotate(180deg);
+}
